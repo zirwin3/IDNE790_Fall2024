@@ -1,5 +1,2 @@
 test3!
 this is another test
-
-
-Yet another real test
