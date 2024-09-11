@@ -1,6 +1,10 @@
+%% ZI: Good job, just make sure to run each line after you write it to check the output - you'll
+%		catch a lot of typos that way! Grade: 82%
+
 %Assignment 2 
 %1.) comparison and types of data
-x = 0.5; % Assign a value to x
+x = 0.5; % Assign a value to x							% ZI: we're missing the computation here, but
+														%	  the rest is correct (half points here)
 y = x <= 1; % Test if x is less than or equal to 1
 disp(['Data type of y: ', class(y)]) 
 % Display the data type of y
@@ -12,7 +16,9 @@ disp(['Data type of y now: ', class(y)])
 
 
 % 2.) string variable
-str = 'Hello World!'; % Create a string variable
+str = 'Hello World!'; % Create a string variable		% ZI: technically, char arrays and Strings are
+														% different data types, but we haven't gotten there yet
+														% so yes!
 disp(['Data type of str: ', class(str)]) 
 % Display the data type of str
 % Data type of str is 'char'
@@ -38,7 +44,10 @@ disp(['Time difference: ', char(diff)])
 % 5.) finding the 10th decimal place
 num = 7/57; % Calculate the division
 str_num = num2str(num,16); % Convert the number to a string with enough precision
-dec = str2double(str_num); % Extract the 10th decimal place 
+dec = str2double(str_num); % Extract the 10th decimal place 						% ZI: It's a good attempt, but you'll need to
+																					%	  extract the 10th decimal place instead of
+																					%	  just converting the whole string back into
+																					%	  a number  (half points here)
 % (12th character in the string)
 disp(['The 10th decimal place of 7/57 is: ', num2str(dec)])
 % dec is assigned the value of the 10th decimal place
@@ -56,7 +65,9 @@ disp(['x1: ', num2str(x1), ', x2: ', num2str(x2)])
 
 
 % 7.) ~Manually~ making an array
-arr1 = [2.5:0.5:4]; % Create arr1
+arr1 = [2.5:0.5:4]; % Create arr1								% ZI: By "manually", I was thinking of hard-coding 
+																%     the numbers, like arr1 = [2.5, 3, 3.5, 4],
+																%     but I didn't specify that, so yes!
 disp('arr1:')
 disp(arr1)
 % arr1 is created with the specified values
@@ -65,7 +76,9 @@ disp(arr1)
 
 % 8.) Using the colon operator and array indexing
 arr2 = 7:3:28; % Create arr2 using colon operator
-z = arr2 + arr2 + arr2; % Calculate the sum of specific elements
+z = arr2 + arr2 + arr2; % Calculate the sum of specific elements		% ZI: almost, but you actually have to extract a specific
+																		% 	  element of the array by indexing, rather than
+																		%     just adding the whole array together  (half points here)
 disp('arr2:')
 disp(arr2)
 disp(['Sum of 3rd, 5th, and 7th elements of arr2: ', num2str(z)])
@@ -74,7 +87,7 @@ disp(['Sum of 3rd, 5th, and 7th elements of arr2: ', num2str(z)])
 
 
 % 9.) reverse the array and make a subset
-arr2_backwards = flip(arr2); % Reverse arr2
+arr2_backwards = flip(arr2); % Reverse arr2								% ZI: you can also do arr2(end:-1:1)
 arr_subset = arr2_backwards(1:2:end); % Extract every other element
 disp('arr2_backwards:')
 disp(arr2_backwards)
@@ -92,7 +105,9 @@ disp(arr3)
 
 
 % 11.) Create array4 from transposed arr3
-arr4 = 'arr3'; % Transpose arr3 to create a column vector
+arr4 = 'arr3'; % Transpose arr3 to create a column vector			% ZI: I'm not sure if this was a typo or a ChatGPT output,
+																	%	  but just use one single quote to transpose - otherwise,
+																	%	  it creates a string/character array  (half points here)
 disp('arr4:')
 disp(arr4)
 % arr4 is now a column vector with the same elements as arr3

@@ -1,10 +1,15 @@
+%% ZI: Great job! Grade: 100%
+
 % % Assignment #2 – MATLAB as a calculator + variables + arrays – 9/4/2024 – Due: 9/10/2024
 
 % Create a script with the following components
 
 % 1. Compute the following calculation in MATLAB:  x=  1/(2+3^2 )+4/5*6/7
 
-x = 1/(2+3^2) + 4/5*6/7;
+x = 1/(2+3^2) + 4/5*6/7;    % ZI: I'd suggest putting parentheses around the
+                            %     fractions - (4/5)*(6/7) - just to make the
+                            %     order clearer, but you got the right
+                            %     answer!
 
 
 % 1a. Test whether x is less than or equal to 1, and store the result in a variable y
@@ -45,7 +50,7 @@ class(num);
 
 % 4. Create a variable now with today’s date, and a variable then with the date Sept. 5, 1988.
 
-now = datetime('today');
+now = datetime('today');            
 
 then = datetime('Sep 5, 1988');
 
@@ -67,7 +72,11 @@ format short;
 
 str = num2str(result, 10);
 
-dec = str2double(str(end));
+dec = str2double(str(end));        % ZI: this is a great programmatic way
+                                   %     to do it! I was thinking of just changing
+                                   %      the format to long and manually looking
+                                   %      at the 10th place as you did before,
+                                   %      but this works!
 
 % 6. Create two variables x1 and x2 that each contains some number (doesn’t matter what)
 
@@ -96,12 +105,16 @@ arr2 = 7:3:28;
 
 % 8a. Create a variable z which is the sum of the 3rd, 5th, and 7th elements of arr2
 
-z = arr2 (3) + arr2 (5) + arr2 (7);
+z = arr2 (3) + arr2 (5) + arr2 (7);     % ZI: just for clarity, I wouldn't
+                                        %     put spaces between the
+                                        %     variable name and the
+                                        %     indexing, but it doesn't hurt
+                                        %     anything
 
 
 % 9. Create an array arr2_backwards which is the same as arr2 but reversed
 
-arr2_backwards = fliplr(arr2);
+arr2_backwards = fliplr(arr2);          % ZI: you can also do arr2(end:-1:1)
 
 % 9a. Create a variable arr_subset which is contains every other element of arr2_backwards
 

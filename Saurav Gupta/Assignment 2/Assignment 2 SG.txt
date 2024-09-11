@@ -1,6 +1,12 @@
+%% ZI: Great job! We'll go over how to create a script this week, so you don't have to 
+%      do everything in the command line next time.  Grade: 100%
+
+
 %1
 
->> x= [1/(2+3^2)]+[(4/5)*(6/7)]
+>> x= [1/(2+3^2)]+[(4/5)*(6/7)]		% ZI: great use of parentheses to make the operations clearer. You
+									%	  don't need the brackets unless you're making arrays, but they
+									%	  don't hurt anything
 
 x =
 
@@ -73,7 +79,9 @@ num =
     "10011"
 
 >> %4
->> now = datetime
+>> now = datetime			% ZI: You can do datetime('today') to just get
+                            %     the date without the time, but this
+                            %     works too!
 
 now = 
 
@@ -115,7 +123,9 @@ now =
 
    08-Sep-2024
 
->> diff= duration(now - then)
+>> diff= duration(now - then)		% ZI: subtracting the two datetime variables automatically
+									%	  creates a duration variable, so you don't need to use
+									%     the "duration()" function
 
 diff = 
 
@@ -145,7 +155,12 @@ c =
 
     '0.1228070175'
 
->> dec=c(end)
+>> dec=c(end)					% ZI: this is a great programmatic way
+                                %     to do it! I was thinking of just changing
+                                %     the format to long and manually looking
+                                %     at the 10th place, but this works! You don't need
+								%     to change the format to long in this case, the function
+								%     will work regardless
 
 dec =
 
@@ -171,13 +186,19 @@ x1 =
 
      1     8     9
 
->> x2(3)=1
+>> x2(3)=1					% ZI: The question might not have been super clear here. I
+							%     had meant for x1 and x2 to be single numbers (not arrays)
+							%     and for you to swap the values. For example, if x1 = 1 and
+							%     x2 = 2, then after the swap, x1 = 2 and x2 = 1. Your code does
+							%     switch some element of both arrays though, so I could see 
+							%     the intent.
 
 x2 =
 
      2     5     1
 
->> z1 = [x1;x2]
+>> z1 = [x1;x2]				% ZI: Again, I think the question wasn't clear. You shouldn't need
+							%     to concatenate anything for this one, but it's good practice!
 
 z1 =
 
@@ -208,7 +229,7 @@ z =
 
 >> %9
 
->> arr2_backwards = 28:-3:7
+>> arr2_backwards = 28:-3:7					% ZI: You can also do arr2(end:-1:1)
 
 arr2_backwards =
 

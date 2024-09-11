@@ -1,3 +1,5 @@
+%% ZI: Great job! Grade: 100%
+
 
 % Problem 1
 x = ((1/(2+3^2))+((4/5)*(6/7)));
@@ -12,8 +14,8 @@ str = "Hello World!"; % Variable str is data type 'string'
 num = "1001"; % Variable num is data type string. Technically, you can add a 1 to it, to make the string "10011"
 
 % Problem 4
-now = datetime(2024,9,5);
-
+now = datetime(2024,9,5);       %% ZI: can also do datetime('today') to get the current day
+                           
 then = datetime(1988,9,5); 
 
 diff = now-then;
@@ -23,7 +25,10 @@ format long
 a = 7/57;
 astr = num2str(a,10);
 achar = char(astr);
-dec = achar(end);
+dec = achar(end);           %% ZI: I like this method! I was thinking of just changing
+                             %      the format to long and manually looking
+                             %      at the 10th place, but this is an
+                             %      excellent programmatic way of doing it.
 
 % Problem 6
 x1 = 51;
@@ -42,7 +47,7 @@ arr2 = 7:3:28;
 z = arr2(3) + arr2(5) + arr2(7);
 
 % Problem 9
-arr2_backwards = 28:-3:7;
+arr2_backwards = 28:-3:7;               %% ZI: can also do arr2(end:-1:1)
 arr_subset = arr2_backwards(1:2:end);
 
 % Problem 10

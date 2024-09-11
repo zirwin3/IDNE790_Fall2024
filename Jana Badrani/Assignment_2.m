@@ -1,3 +1,5 @@
+%% ZI: Great job! Grade: 100%
+
 %Question 1
 
 x = (1/(2+(3^2))) + ((4/5)*(6/7))
@@ -30,7 +32,10 @@ num + 1 %Attempting to add one to num does not increase the value of num to 1002
 
 %Question 4
 
-now = today("datetime")
+now = today("datetime")     % ZI: The "today()" function is an older way of
+                            %     doing things, but definitely still works!
+                            %     The new recommended way to do it is
+                            %     datetime() or datetime('today')
 
 then = datetime(1988,09,05)
 
@@ -66,7 +71,7 @@ z = arr2(3) + arr2(5) + arr2(7)
 
 %Question 9
 
-arr2_backwards = [28:-3:7]
+arr2_backwards = [28:-3:7]          % ZI: You can also do arr2(end:-1:1)
 
 arr_subset = arr2_backwards(1:2:end)
 
@@ -76,7 +81,8 @@ arr3 = [arr2, arr_subset]
 
 %Question 11
 
-arr4 = transpose(arr3)
+arr4 = transpose(arr3)      % ZI: You can also do arr3' (the single quote 
+                            %     after a numer indicates transpose)
 
 
 
