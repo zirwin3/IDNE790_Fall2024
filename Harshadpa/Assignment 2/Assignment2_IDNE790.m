@@ -124,7 +124,6 @@ arr_subset = arr2_backwards (1:2:end);
 
 arr3 = [arr2, arr_subset];
 
-
 % 11. Create an array arr4 which a column (vertical) vector with the same elements as arr3
 
 arr4 = arr3';
