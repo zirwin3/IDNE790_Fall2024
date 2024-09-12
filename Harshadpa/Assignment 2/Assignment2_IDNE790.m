@@ -6,11 +6,10 @@
 
 % 1. Compute the following calculation in MATLAB:  x=  1/(2+3^2 )+4/5*6/7
 
-x = 1/(2+3^2) + 4/5*6/7;    % ZI: I'd suggest putting parentheses around the
+x = 1/(2+3^2) + (4/5)*(6/7);    % ZI: I'd suggest putting parentheses around the
                             %     fractions - (4/5)*(6/7) - just to make the
                             %     order clearer, but you got the right
                             %     answer!
-
 
 % 1a. Test whether x is less than or equal to 1, and store the result in a variable y
 
