@@ -104,7 +104,7 @@ arr2 = 7:3:28;
 
 % 8a. Create a variable z which is the sum of the 3rd, 5th, and 7th elements of arr2
 
-z = arr2 (3) + arr2 (5) + arr2 (7);     % ZI: just for clarity, I wouldn't
+z = arr2(3) + arr2(5) + arr2(7);     % ZI: just for clarity, I wouldn't
                                         %     put spaces between the
                                         %     variable name and the
                                         %     indexing, but it doesn't hurt
