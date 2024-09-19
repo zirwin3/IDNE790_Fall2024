@@ -1,11 +1,13 @@
-function y = reverse_rows(x,dim)
+function y = reverse_rows(x)
 %Technically correct is the best kind of correct?
-y = flip(x,dim);
+%y = flip(x,dim);
 
-
-% % test = rand(3,5);
-% % % i % grab each subsequent row from test and vertcat below test2
-% % for i = 0:length(test)
-% %     result = test(i+1,:);
-% %   test2 = [test2(end,:);result];
-% % end
+%%
+y = zeros(size(x));
+i2 = 0;
+% grab each subsequent row from test and vertcat below test2
+for i = size(x,1):-1:1
+   grabbed = x(i,:);
+   i2 = i2+1;  
+   y(i2,:) = grabbed;
+end
