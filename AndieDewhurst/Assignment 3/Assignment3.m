@@ -28,7 +28,7 @@ end
 
 %% 7
 G = rand(1,100);
-
+Gnorm = (G-min(G))/(max(G) - min(G));
 
 %% 8 
 H = reverse_rows(C,1);
