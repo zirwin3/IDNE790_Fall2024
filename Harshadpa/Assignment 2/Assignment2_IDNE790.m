@@ -6,11 +6,10 @@
 
 % 1. Compute the following calculation in MATLAB:  x=  1/(2+3^2 )+4/5*6/7
 
-x = 1/(2+3^2) + 4/5*6/7;    % ZI: I'd suggest putting parentheses around the
+x = 1/(2+3^2) + (4/5)*(6/7);    % ZI: I'd suggest putting parentheses around the
                             %     fractions - (4/5)*(6/7) - just to make the
                             %     order clearer, but you got the right
                             %     answer!
-
 
 % 1a. Test whether x is less than or equal to 1, and store the result in a variable y
 
@@ -105,7 +104,7 @@ arr2 = 7:3:28;
 
 % 8a. Create a variable z which is the sum of the 3rd, 5th, and 7th elements of arr2
 
-z = arr2 (3) + arr2 (5) + arr2 (7);     % ZI: just for clarity, I wouldn't
+z = arr2(3) + arr2(5) + arr2(7);     % ZI: just for clarity, I wouldn't
                                         %     put spaces between the
                                         %     variable name and the
                                         %     indexing, but it doesn't hurt
@@ -124,7 +123,6 @@ arr_subset = arr2_backwards (1:2:end);
 % 10. Create an array arr3 which is the concatenation of arr2 and arr_subset
 
 arr3 = [arr2, arr_subset];
-
 
 % 11. Create an array arr4 which a column (vertical) vector with the same elements as arr3
 
