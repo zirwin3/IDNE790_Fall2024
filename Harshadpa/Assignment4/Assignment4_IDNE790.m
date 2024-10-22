@@ -1,3 +1,6 @@
+% ZI: great work! grade: 100
+
+
 
 %% Create a script with the following components*
 % Note1: bolded items ('hwydata', 'statelabels', 'variablelabels') are variables that should be present in the MATLAB workspace after running the script
@@ -20,6 +23,9 @@ accidents = hwydata(:, strcmp(variablelabels, 'TrafficAccidents'));
 [maxAccidents, maxIndex] = max(accidents);
 fprintf('The state with the highest accidents is %s with %d.\n', statelabels{maxIndex}, maxAccidents);
 
+    % ZI: great! remember that, since variablelabels is a string array, you
+    % can use the '==' operator instead of strcmp(). Also, you can access
+    % the elements using parentheses instead of curly braces.
 
 %% 3.	Which state had the highest ratio of accidents to total drivers (“LicensedDrivers_thousands_”), and what was the ratio?
 
@@ -27,12 +33,15 @@ drivers = hwydata(:, strcmp(variablelabels, 'LicensedDrivers_thousands_'));
 [maxRatio, maxIndex] = max(accidents ./ drivers);
 fprintf('Highest accidents/drivers ratio: %s (%.4f)\n', statelabels{maxIndex}, maxRatio);
 
+    % ZI: great!
+
 %% 4 Which state had the highest ratio of accidents to total population (“TotalPopulation”) in thousands (i.e. number of accidents per 1k residents), and what was the ratio?
 
 population = hwydata(:, strcmp(variablelabels, 'TotalPopulation')) / 1000;
 [maxRatio, maxIndex] = max(accidents ./ population);
 fprintf('Highest accidents per 1k residents: %s (%.4f)\n', statelabels{maxIndex}, maxRatio);
 
+    % ZI: great!
 
 %% 5.	Visualize the data using the plot() function in the following way
 % a.	Plot the number of accidents (y-axis) vs the total population in thousands (x-axis)
@@ -47,6 +56,8 @@ xlabel('Population / Drivers');
 ylabel('Number of Accidents');
 title('Accidents vs Population and Drivers');
 legend('Population', 'Drivers');
+
+    % ZI: great!
 
 %% 6.	Visualize the data using the scatter() function (look at the documentation!) in the following way:
     % a.	Place a marker at the latitude and longitude of each state (“CentroidLongitude” and “CentroidLatitude”)
@@ -79,4 +90,4 @@ for i = 1:length(statelabels)
 end
 
 
-
+    % ZI: great! I love the state name labels addition

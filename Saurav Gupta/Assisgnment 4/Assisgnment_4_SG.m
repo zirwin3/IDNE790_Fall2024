@@ -1,3 +1,5 @@
+% ZI: great work! grade: 92
+
 %Assignment 4
 % 1
 load('data_for_assignment4.mat');
@@ -14,6 +16,11 @@ trafficAccidents = hwydata(:, trafficAccidentsIndex);
 
  % To find the name of the state with the most accidents
 stateWithMaxAccidents = statelabels(stateIndex);
+
+    % ZI: great work! remember that, since variablelabels is a string
+    % array, you can just use the '==' operator instead of strcmp(). Also,
+    % you can use the equality test (==) directly as the logical index into
+    % hwydata (e.g. hwydata(:,variablelabels=='TrafficAccidents'))
 
 %% 3
 
@@ -34,6 +41,8 @@ accidentRatio = trafficAccidents ./ licensedDrivers;
 % To get the name of the state with the highest ratio
 stateWithMaxRatio = statelabels(stateIndex);
 
+    % ZI: looks good!
+
 %% 4
 
 % 'TrafficAccidents' and 'TotalPopulation'
@@ -52,6 +61,10 @@ accidentToPopulationRatio = trafficAccidents ./ totalPopulation;
 
 % the name of the state with the highest ratio
 stateWithMaxRatio = statelabels(stateIndex);
+
+    % ZI: looks great, except we wanted the ratio to be accidents per 1000
+    % residents, so the total population should be divided by 1000. 1/4 off
+    % here, but looks great other than that
 
 %% 5
 
@@ -83,6 +96,10 @@ legend('Accidents vs Population', 'Accidents vs Licensed Drivers');
 % Release the hold on the figure
 hold off;
 
+    % ZI: looks great, except the first line should be be plotted against
+    % the population in thousands. Because its not scaled right, the 2nd
+    % plot looks very squashed. 1/4 points off, but other than that, looks good!
+
 %% 6
 
 % the indices
@@ -110,5 +127,7 @@ title('Traffic Accidents Across States: Marker Size = Accidents, Color = Acciden
 % Add colorbar to indicate the ratio (accidents per population)
 colorbar;
 ylabel(colorbar, 'Accidents per 1000 Residents');
+
+    % ZI: great work!
 
 

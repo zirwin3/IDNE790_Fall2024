@@ -1,3 +1,6 @@
+% ZI: great work, just remember to run your code to make sure it doesn't
+% have any errors. Grade: 75
+
 %% 1.	Load in the “data_for_assignment4.mat” file
 load data_for_assignment4.mat
 %% 2.	Which state had the highest number of accidents (“TrafficAccidents”), and how many were there?
@@ -19,6 +22,14 @@ state_with_max_accidents = hwy_table.State(max_idx);
 % Display the result
 disp(['State with highest accidents: ' state_with_max_accidents]);
 disp(['Number of accidents: ' num2str(max_accidents)]);
+
+        
+    % ZI: Looks great, except it gives an error (the variable names from
+    % the data file shouldn't have underscores - not sure how that ended up
+    % in there - and statenames should be statelabels). Half points, but
+    % looks great other than that, just don't forget to run the code to
+    % catch errors/typos
+
 %% 3.	Which state had the highest ratio of accidents to total drivers (“LicensedDrivers_thousands_”), 
 % and what was the ratio? Mississippi, 0.47468
 % Calculate the ratio of accidents to total drivers (per thousand drivers)
@@ -32,6 +43,8 @@ state_with_max_ratio = hwy_table.State(max_idx);
 disp(['State with the highest accidents to drivers ratio: ' state_with_max_ratio]);
 disp(['Ratio: ' num2str(max_ratio)]);
 
+    % ZI: great!
+
 %% 4.	Which state had the highest ratio of accidents to total population (“TotalPopulation”) in thousands 
 % (i.e. number of accidents per 1k residents), and what was the ratio?
 % Wyoming, 0.00033213
@@ -44,6 +57,10 @@ state_with_max_ratio = hwy_table.State(max_idx);
 % Display the results
 disp(['State with the highest accidents to populagtion ratio: ' state_with_max_ratio]);
 disp(['Ratio: ' num2str(max_ratio)]);
+
+        % ZI: Looks great, except we wanted the ratio to be accidents per
+        % 1000 residents, so the total population should be divided by
+        % 1000. 3/4 points
 
 % figure;
 % plot(accidents_to_population_ratio, '-x', 'LineWidth', 2);  % Plot with line and x markers
@@ -84,6 +101,14 @@ legend show;  % Display the legend with automatic labels from 'DisplayName'
 
 % Release the hold so further plots don't overlay
 hold off;
+
+    % ZI: you've definitely got the right idea here, but a couple issues.
+    % The x-axis should be the total population (in thousands) for the
+    % first line, and number of drivers for the second. Since you just gave
+    % the plot() function a single input, its plotting the data versus the
+    % element number. The first line should also be the ratio of accidents
+    % to population, not drivers. 1/4 points here
+
 %% 6.	Visualize the data using the scatter() function (look at the documentation!) in the following way:
 % a.	Place a marker at the latitude and longitude of each state (“CentroidLongitude” and “CentroidLatitude”)
 % i.	Hint: it should look vaguely like the United States
@@ -106,3 +131,5 @@ ylabel('Latitude');
 
 % Add grid and display it
 grid on;
+
+    % ZI: looks great!
