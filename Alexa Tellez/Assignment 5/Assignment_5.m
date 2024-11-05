@@ -71,23 +71,16 @@ end
 
 
 % 5.
-
-% Load the data
 data = readtable('indomethacin.xlsx');
 
-% Get the unique subject IDs
 subjects = unique(data.subject);
 numSubjects = length(subjects);
 
-% Create the figure and hold on to the axes
 figure;
 hold on;
-
-% Plot individual subject data with error bars
 for i = 1:numSubjects
     subjectData = data(data.subject == subjects(i), :);
 
-    % Calculate mean and std for each subject at each time point
     timePoints = unique(subjectData.time);
     meanConc = zeros(size(timePoints));
     stdConc = zeros(size(timePoints));
@@ -100,7 +93,6 @@ for i = 1:numSubjects
     errorbar(timePoints, meanConc, stdConc, 'LineWidth', 1);
 end
 
-% Calculate overall mean and standard deviation
 timePoints = unique(data.time);
 meanConc = zeros(size(timePoints));
 stdConc = zeros(size(timePoints));
@@ -110,13 +102,9 @@ for i = 1:length(timePoints)
     stdConc(i) = std(data.concentration(data.time == timePoints(i)));
 end
 
-% Plot overall mean with error bars
 errorbar(timePoints, meanConc, stdConc, 'k-', 'LineWidth', 1.5);
 
-% Add labels and title
 xlabel('Time');
 ylabel('Concentration');
 title('Blood Concentration of Indomethacin Over Time');
 legend('Subject 1', 'Subject 2', 'Subject 3', 'Subject 4', 'Subject 5', 'Subject 6', 'overall mean')
-% Save the plot (optional)
-% saveas(gcf, 'indomethacin_concentration_plot.png');
