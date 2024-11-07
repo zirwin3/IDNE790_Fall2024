@@ -1,3 +1,5 @@
+% ZI: Great work! Grade: 95
+
 %% 1: generating random data points
 
 r1 = normrnd(30, 10, 10000);
@@ -16,6 +18,9 @@ hold on; histogram(r2, 'BinWidth', 5)
 figure; h2 = histogram(r1, 'BinWidth', 5, 'FaceColor', 'red')
 hold on; histogram(r2, 'BinWidth', 5, 'FaceColor', 'auto')
 
+    % ZI: Great! Remember that you can also change the FaceColor/BinWidth
+    % properties after plotting by using the h1/h2 objects
+
 %% 2
 
 load("seamount.mat");
@@ -27,6 +32,8 @@ figure; scatter3(x, y, z, [], z, 'filled');
 xlabel('x-coordinate');
 ylabel('y-coordinate');
 zlabel('z-coordinate (height)');
+
+    % ZI: great!
 
 %% 3
 
@@ -40,7 +47,13 @@ plotAdded(mdl, "Smoker");
 % 3b
 mdla = anova(data, 'Diastolic ~ Age + Height + Weight + Gender + Smoker', CategoricalFactors=["Gender" "Smoker"]);
 
+    % ZI: Great!
+
 %% 4: created function fib.m
+
+    % ZI: Great work, except the sum for n = 1 should be 1 instead of 2,
+    % you just need to check the input on the last line so you can ignore
+    % the 2nd element. 1/4 point off, but looks great otherwise!
 
 %% 5
 
@@ -62,3 +75,9 @@ x = tbl.time(1:11);
 y = M
 err = S
 errorbar(x, y, err, 'LineWidth', 3);
+
+    % ZI: The output looks great, although you did a bit more work than
+    % strictly necessary. You could have input the "tbl2" matrix into the
+    % plot function instead of writing out everything, and the errorbar
+    % function will plot the mean so you don't necessarily have to plot the
+    % mean line separately. But none of that hurt anything, so great work!

@@ -1,3 +1,6 @@
+% ZI: Great work, just remember to run the code a final time to make sure
+% you don't have any typos. Grade: 90
+
 %1 
 mean_val = 30;        
 std_dev = 10;         
@@ -35,6 +38,14 @@ xlabel('Data Values');
 ylabel('Frequency');
 legend('Data 1 (Mean = 30, SD = 10)', 'Data 2 (Mean = 0, SD = 20)');
 
+    % ZI: Good thinking, although don't forget to run the code at the end
+    % to make sure you don't have any typos - you accidentally set the 2nd
+    % vector to "data" instead of "data2" so your histogram code didn't
+    % run. The other issue is that you made sure the histograms had the
+    % same number of bins, but not the same bin width (because the variance
+    % of the two distributions are different, the same number of bins spans
+    % a different width). Half points here, but you had the right idea.
+
 %% 2
 load('seamount.mat');
 % Create a 3D scatter plot
@@ -44,6 +55,8 @@ ylabel('Y Coordinate');
 zlabel('Z Coordinate (Height)');
 colorbar;
 title('3D Scatter Plot');
+
+    % ZI: Great work!
 
 %% 3
 data = readtable('patients.xlsx');
@@ -70,6 +83,7 @@ anovaResults = anova(model, 'summary');
 % Display the ANOVA table
 disp(anovaResults);
 
+    % ZI: Looks good!
 
 %% 4
 fib(1);
@@ -79,6 +93,8 @@ n = 10;
 [nth_fib, sum_fib] = fib(n);
 fprintf('The %dth Fibonacci number is %d.\n', n, nth_fib);
 fprintf('The sum of the first %d Fibonacci numbers is %d.\n', n, sum_fib);
+
+    % ZI: Great work, I love the recursive function!
 
 %% 5
 
@@ -124,7 +140,7 @@ title('Indomethacin Concentration Over Time for Each Subject and Mean');
 legend('Subject 1', 'Subject 2', 'Subject 3', 'Subject 4', 'Subject 5', 'Subject 6');
 
 
-
+    % ZI: Looks great!
 
 
 

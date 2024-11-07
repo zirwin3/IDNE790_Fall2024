@@ -1,3 +1,5 @@
+% ZI: Great work! grade: 95
+
 % 1. histograms
 m1 =30
 m2 = 0
@@ -14,7 +16,9 @@ histogram(data1, 'BinWidth', binwidth, 'FaceColor', 'm');
 hold on
 histogram(data2, "BinWidth", binwidth);
 
-% 2. 3D scatterplot
+        % ZI: Looks great!
+
+%% 2. 3D scatterplot
 load("seamount.mat")
 
 f2 = figure;
@@ -27,8 +31,9 @@ title('3D Volcano Scatterplot');
 
 colormap('hot')
 
+        % ZI: Nice!
 
-% 3.  patient data
+%% 3.  patient data
 importdata("patients.xlsx")
 data = readtable('patients.xlsx');
 
@@ -43,34 +48,39 @@ anova(model);
 f3 = figure;
 plotAdded(model, 'Smoker');
 
-
-% 4. Fibonacci function
-
-function [nthFib, sumFirst_n] = fib(n)
-if n <= 0
-    error("Input must be a positive integer.");
-end
-
-f1 = 1;
-f2 = 1;
-
-if n == 1 || n == 2
-    nthFib = 1;
-    sumFirst_n = 1;
-    return;
-end
-
-sumFirst_n = 2;  % calculate the nth number and the sum
-for i = 3:n
-    nthFib = f1 + f2;
-    sumFirst_n = sumFirst_n + nthFib;
-    f1 = f2;
-    f2 = nthFib;
-end
-end
+    % ZI: Looks great! The importdata() function isn't necessary, but it
+    % doesn't hurt anything.
 
 
-% 5.
+%% 4. Fibonacci function
+
+% function [nthFib, sumFirst_n] = fib(n)
+% if n <= 0
+%     error("Input must be a positive integer.");
+% end
+% 
+% f1 = 1;
+% f2 = 1;
+% 
+% if n == 1 || n == 2
+%     nthFib = 1;
+%     sumFirst_n = 1;
+%     return;
+% end
+% 
+% sumFirst_n = 2;  % calculate the nth number and the sum
+% for i = 3:n
+%     nthFib = f1 + f2;
+%     sumFirst_n = sumFirst_n + nthFib;
+%     f1 = f2;
+%     f2 = nthFib;
+% end
+% end
+
+    % ZI: Looks great, except the sum for n = 2 should be 2, not 1. 1/4
+    % point off for that, but otherwise a great solution!
+
+%% 5.
 data = readtable('indomethacin.xlsx');
 
 subjects = unique(data.subject);
@@ -108,3 +118,10 @@ xlabel('Time');
 ylabel('Concentration');
 title('Blood Concentration of Indomethacin Over Time');
 legend('Subject 1', 'Subject 2', 'Subject 3', 'Subject 4', 'Subject 5', 'Subject 6', 'overall mean')
+
+
+    % ZI: Excellent work! Technically, because there's only one measurement
+    % per time point per subject, you don't need the extra work of figuring
+    % out the mean/std for the individual lines, but this is a great
+    % framework for more general data where you might have extra
+    % measurements

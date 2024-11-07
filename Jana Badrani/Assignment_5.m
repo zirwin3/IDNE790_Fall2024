@@ -1,3 +1,7 @@
+% ZI: Great work! Just remember for loops, and you don't have to have data
+% in a table to use the plot/scatter functions - sometimes a table is super
+% useful, and sometimes it's just more work. Grade: 95
+
 %% Question 1
 
 Q1 = normrnd(30,10, 10000, 1);
@@ -26,6 +30,14 @@ histogram(Q1, 'BinWidth', 5, 'FaceColor', '#7E2F8E')
 hold on
 histogram(Q1b, 'BinWidth', 5)
 
+    % ZI: Good work, although remember that you can change properties after
+    % plotting using the objects returned by the histogram() function so
+    % you don't have to replot everything. The only issue with the code at
+    % the moment is that you don't create a new figure/turn off the hold
+    % after each plot, so at the end we end up with 6 histograms on the
+    % same axes... Of course, I didn't tell you NOT to have 6 histograms,
+    % so no points off, but just remember to check the outputs
+
 %% Question 2
 
 load("seamount.mat");
@@ -42,6 +54,9 @@ xlabel('x-coordinate')
 ylabel('y-coordinate')
 zlabel('height')
 
+    % ZI: Looks great! Just remember to create a new figure every time you
+    % plot so you don't accidentally plot onto an existing figure. 
+
 %% Question 3
 
 Q3 = readtable("patients.xlsx");
@@ -56,9 +71,15 @@ plotAdded(mdl, 'Smoker')
 
 Q3B = anova(Q3, 'Diastolic ~ Age + Height + Weight + Gender + Smoker', CategoricalFactors= ["Gender" "Smoker"]);
 
+    % ZI: Great work!
+
 %% Question 4 - fib function
 
-[test1, test2] = fib(4);
+[test1, test2] = fib(4)
+
+    % ZI: Looks great, except the sum for n = 1 should be 1 instead of 2.
+    % You just need to check the input at the last line to account for the
+    % 2nd element in a. 1/4 off, but looks great otherwise
 
 %% Question 5
 
@@ -163,7 +184,8 @@ errorbar(times,meanconc, err, 'LineWidth', 1.5)
 legend("Subject 1", "Subject 2", "Subject 3", "Subject 4", "Subject 5", "Subject 6", "MEAN")
 
 
-
+    % ZI: The plot looks great, although you did some extra work that you
+    % could have avoided - remember "for" loops :)
 
 
 
